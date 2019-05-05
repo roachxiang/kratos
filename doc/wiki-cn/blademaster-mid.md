@@ -20,7 +20,7 @@ func (f HandlerFunc) ServeHTTP(c *Context) {
 }
 ```
 
-1. 实现了`Handler`接口，可以作为engine的全局中间件使用：`engine.User(YourHandler)`
+1. 实现了`Handler`接口，可以作为engine的全局中间件使用：`engine.Use(YourHandler)`
 2. 声明为`HandlerFunc`方法，可以作为router的局部中间件使用：`e.GET("/path", YourHandlerFunc)`
 
 简单示例代码如下：
@@ -103,6 +103,9 @@ func Example() {
 }
 ```
 
+# 扩展阅读
+
+[bm快速开始](blademaster-quickstart.md) [bm模块说明](blademaster-mod.md)  [bm基于pb生成](blademaster-pb.md)
 
 -------------
 
